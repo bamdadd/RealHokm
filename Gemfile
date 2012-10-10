@@ -5,6 +5,7 @@ gem 'sinatra', '1.3.3', :require => 'sinatra'
 gem 'json', '1.7.5', :require => 'json'
 gem 'compass', '0.12.2', :require => 'compass' # sass and compass should likely go under a dev group
 gem 'sass', '3.2.1', :require => 'sass'
+gem 'slim', '1.3.2', :require => 'slim'
 
 group :test do
   gem 'autotest'
