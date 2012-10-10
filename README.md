@@ -13,3 +13,8 @@ Getting Started
 
 Daily Workflow
 --------------
+
+git pull
+source devenv
+rake server # launches a local sinatra instance
+rake rspec # runs the tests but, is not dependent on a server running
