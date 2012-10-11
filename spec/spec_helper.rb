@@ -15,6 +15,10 @@ end
 
 RSpec.configure do |config|
   Capybara.app = Frontend
+  Capybara.register_driver :selenium do |app|
+    Capybara::Selenium::Driver.new(app, :browser => :firefox)
+  end
+  Capybara.default_driver = :selenium
   config.include Rack::Test::Methods
   config.include Capybara, :type => :integration
   config.include Capybara::DSL
