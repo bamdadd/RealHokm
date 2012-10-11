@@ -14,6 +14,9 @@ def app
 end
 
 RSpec.configure do |config|
+  Capybara.app = Frontend
   config.include Rack::Test::Methods
+  config.include Capybara, :type => :integration
+  config.include Capybara::DSL
 end
 

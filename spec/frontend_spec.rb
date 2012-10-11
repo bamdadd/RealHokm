@@ -3,8 +3,8 @@ require 'spec_helper'
 describe 'Frontend' do
   describe 'Homepage' do
     it 'should respond to a GET request' do
-      get '/'
-      last_response.should be_ok
+      visit '/'
+      page.body.should match(/This is/)
     end
   end
 
