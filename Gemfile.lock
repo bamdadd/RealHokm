@@ -55,6 +55,7 @@ GEM
     slim (1.3.2)
       temple (~> 0.5.0)
       tilt (~> 1.3.3)
+    statsd-ruby (1.0.0)
     temple (0.5.4)
     tilt (1.3.3)
     xpath (0.1.4)
@@ -73,3 +74,4 @@ DEPENDENCIES
   sass (= 3.2.1)
   sinatra (= 1.3.3)
   slim (= 1.3.2)
+  statsd-ruby

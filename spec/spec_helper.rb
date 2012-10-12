@@ -14,6 +14,11 @@ def app
 end
 
 RSpec.configure do |config|
+  config.before(:all) do
+    @stats = Statsd.new('metrics', 8125)
+    @spec_start = Time.now
+  end
+  
   Capybara.app = Frontend
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, :browser => :firefox)
@@ -22,5 +27,10 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include Capybara, :type => :integration
   config.include Capybara::DSL
+
+  config.after(:all) do
+    @stats.increment('cobra.build.count')
+    @stats.timing('cobra.build.spec.duration_ms', ((Time.now - @spec_start) * 1000).round)
+  end
 end
 
