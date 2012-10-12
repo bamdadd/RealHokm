@@ -1,4 +1,7 @@
 class Frontend < Sinatra::Base
+  set :views, File.join(settings.root, '..', 'views')
+  set :public_folder, File.join(settings.root, '..', '..', 'public')
+
   get '/?' do
     slim :homepage
   end

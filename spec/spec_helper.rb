@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default, :test)
-require File.join(File.dirname(__FILE__), '..', 'lib', 'frontend.rb')
+require File.join(File.dirname(__FILE__), '..', 'app', 'controllers', 'frontend.rb')
 
 set :environment, :test
 set :run, false
