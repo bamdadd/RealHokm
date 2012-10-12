@@ -4,7 +4,7 @@ task :default => :spec
 
 desc 'Run server'
 task :server do
-  %x{rackup config.ru}
+  %x{rackup config.ru -p8282}
 end
 
 desc 'Run specs'

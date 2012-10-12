@@ -20,3 +20,11 @@ doc/
 *.swp
 .DS_Store
 bin
+
+.idea/.rakeTasks
+
+*.xml
+
+.idea/RealHokm.iml
+
+.idea/.name
