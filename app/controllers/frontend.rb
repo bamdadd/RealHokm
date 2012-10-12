@@ -6,8 +6,8 @@ class Frontend < Sinatra::Base
     slim :homepage
   end
 
-  get '/css/screen.css' do
+  get '/css/:name.css' do
     content_type 'text/css', :charset => 'utf-8'
-    sass :'css/screen'
+    sass :"css/#{params[:name]}"
   end
 end
